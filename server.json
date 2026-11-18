@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Syntra-Tymko/syntra",
+  "description": "Project management for your AI assistant: projects, tasks, risks and sprints of a Syntra workspace",
+  "title": "Syntra PMO",
+  "version": "1.0.0",
+  "websiteUrl": "https://syntra.tymko.tech/features/en/integrations.html",
+  "icons": [
+    {
+      "src": "https://syntra.tymko.tech/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://syntra.tymko.tech/mcp"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://syntra.tymko.tech/mcp/{workspace}",
+      "variables": {
+        "workspace": {
+          "description": "Your workspace's own address (Syntra \u2192 Settings \u2192 API), for clients that allow one connector per URL",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
